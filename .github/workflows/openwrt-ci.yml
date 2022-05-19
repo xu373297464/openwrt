@@ -11,7 +11,7 @@ jobs:
 
   build_openwrt:
 
-    name: Build OpenWrt firmware
+    name: OpenWrt-8812au
 
     runs-on: ubuntu-latest
 
