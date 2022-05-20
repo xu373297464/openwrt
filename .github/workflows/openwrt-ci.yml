@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref:  ${{ github.ref }}
 
       - name: Checkout rlt8812bu makefile
         uses: actions/checkout@v2
