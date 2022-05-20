@@ -15,8 +15,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.event.repository.owner.id == github.event.sender.id
-
     steps:
 
       - name: Checkout
@@ -46,6 +44,7 @@ jobs:
 
       - name: Update feeds
         run: |
+          ls package/kernel
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
