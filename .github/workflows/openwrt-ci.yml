@@ -51,8 +51,10 @@ jobs:
 
       - name: Generate configuration file
         run: |
-          grep -n 88 .config
           make defconfig
+          echo "test : start"
+          grep -n 88 .config
+          echo "test : end"
 
       - name: Make download
         run: |
@@ -61,6 +63,9 @@ jobs:
 
       - name: Compile firmware
         run: |
+          echo "test : start"
+          grep -n 88 .config
+          echo "test : end"
           make -j$(nproc) || make -j1 V=s
           echo "======================="
           echo "Space usage:"
