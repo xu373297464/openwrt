@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: xu373297464/RTL88x2BU-OpenWRT
-          ref: linux5.11+
+          ref: master
           path: package/kernel/RTL88x2BU-OpenWRT
 
       - name: Space cleanup
@@ -116,3 +116,4 @@ jobs:
           file: ./artifact/firmware/*
           tag: ${{ github.ref }}
           file_glob: true
+          overwrite: true
