@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2020 KFERMercer
 #
-name: OpenWrt-8812au
+name: OpenWrt-immortal-8812bu
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ jobs:
 
   build_openwrt:
 
-    name: OpenWrt-8812au
+    name: OpenWrt-immortal-8812bu
 
     runs-on: ubuntu-latest
 
