@@ -22,12 +22,12 @@ jobs:
         with:
           ref:  ${{ github.ref }}
 
-      - name: Checkout rlt8812bu makefile
-        uses: actions/checkout@v2
-        with:
-          repository: xu373297464/RTL88x2BU-OpenWRT
-          ref: master
-          path: package/kernel/RTL88x2BU-OpenWRT
+#      - name: Checkout rlt8812bu makefile
+#        uses: actions/checkout@v2
+#        with:
+#          repository: xu373297464/RTL88x2BU-OpenWRT
+#          ref: master
+#          path: package/kernel/RTL88x2BU-OpenWRT
 
       - name: Space cleanup
         env:
