@@ -45,10 +45,6 @@ jobs:
 
       - name: Update feeds
         run: |
-          ls package/kernel
-          echo "--------------------"
-          cat package/kernel/RTL88x2BU-OpenWRT/Makefile
-          echo "--------------------"
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
@@ -67,9 +63,6 @@ jobs:
 
       - name: Compile firmware
         run: |
-          echo "test : start"
-          grep -n 88 .config
-          echo "test : end"
           make -j$(nproc) || make -j1 V=s
           echo "======================="
           echo "Space usage:"
